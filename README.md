@@ -1,4 +1,4 @@
-Loamok/Ardui-libs/Receiver
+Loamok/Ardui-libs
 README.md
 Functions usage with the arduino© ide
 
@@ -19,6 +19,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 See lgpl.txt
+
+Receiver :
+Library part to manage a board containing a RX2 RC Receiver connected to your arduino.
 
 Install the folder "Receiver" in the "libraries" folder in your sketchbook folder.
 Restart the arduino ide.
