@@ -1,0 +1,48 @@
+C/C++/ino files :
+/*
+  Loamok/Ardui-libs/<final_url>
+  <file.ext>
+  <file function description>
+
+  Created by <firstname> <name>, <month> <day>, <year>.
+
+    This file is part of "Loamok Ardui-libs".
+    https://redmine.loamok.org/projects/ardui-libs
+
+    "Loamok Ardui-libs" is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License.
+
+    "Loamok Ardui-libs" is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+    See lgpl.txt
+*/
+
+.sh/Other text files : 
+##Loamok/Ardui-libs/<final_url>
+##<file.ext>
+##<file function description>
+##
+##Created by <firstname> <name>, <month> <day>, <year>.
+##
+##
+##This file is part of "Loamok Ardui-libs".
+##https://redmine.loamok.org/projects/ardui-libs
+##
+##"Loamok Ardui-libs" is free software: you can redistribute it and/or modify
+##it under the terms of the GNU Lesser General Public License as published by
+##the Free Software Foundation, either version 3 of the License.
+##
+##"Loamok Ardui-libs" is distributed in the hope that it will be useful,
+##but WITHOUT ANY WARRANTY; without even the implied warranty of
+##MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##GNU Lesser General Public License for more details.
+##
+##You should have received a copy of the GNU Lesser General Public License
+##along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+##See lgpl.txt
