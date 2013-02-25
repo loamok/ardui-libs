@@ -40,7 +40,7 @@ void setup() {
 
 void loop() {
   RDATAS rcv = rc.readDatas();
-  // do something sexy with you're datas from an RX2 RC Receiver board
+  // do something sexy with your datas from an RX2 RC Receiver board
 }
 
 // #2 With short object creation
@@ -58,7 +58,7 @@ void setup() {
 
 void loop() {
   RDATAS rcv = rc.readDatas();
-  // do something sexy with you're datas from an RX2 RC Receiver board
+  // do something sexy with your datas from an RX2 RC Receiver board
 }
 
 // #3 With long object creation
@@ -75,7 +75,7 @@ void setup() {
 
 void loop() {
   RDATAS rcv = rc.readDatas();
-  // do something sexy with you're datas from an RX2 RC Receiver board
+  // do something sexy with your datas from an RX2 RC Receiver board
 }
 
 
