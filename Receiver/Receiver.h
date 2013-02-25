@@ -36,7 +36,11 @@ struct RDATAS { // Pretty structure to manage both pins and datas
 class Receiver // Class that represent the receiver
 {
   public:
-    Receiver(int forward, int backward, int left, int right); // Object constructor
+    Receiver(int forward, int backward, int left, int right); // Object constructor #1
+    Receiver(RDATAS pins); // Object constructor #2
+    Receiver(); // Object constructor #3
+    void init(int forward, int backward, int left, int right); // initialize with an empty object (constructor #3)
+    void init(RDATAS pins); // initialize with an empty object (constructor #3)
     RDATAS readDatas(); // Read the datas from the receiver
   private:
     int _readPin(int pin);

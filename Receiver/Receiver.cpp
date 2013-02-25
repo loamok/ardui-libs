@@ -26,7 +26,7 @@
 #include "Receiver.h"
 
 /**
- * Receiver constructor ; Params in order are : 
+ * Receiver constructor #1 ; Params in order are : 
  *  Forward pin
  *  backward pin
  *  Left pin
@@ -35,7 +35,42 @@
 Receiver::Receiver(int forward, int backward, int left, int right)
 {
   // Assigns the pins
-  _pins = { forward, backward, left, right };
+  init(forward, backward, left, right);
+}
+
+/**
+ * Receiver constructor #2 ; Params in order are : 
+ *  RDATAS STRUCT of pins
+**/
+Receiver::Receiver(RDATAS pins)
+{
+  init(pins);
+}
+
+/**
+ * Receiver constructor #3
+**/
+Receiver::Receiver()
+{
+  // Datas are initialized to LOW (0)
+  _datas = {LOW, LOW, LOW, LOW};
+}
+
+/**
+ * Initialize an empty object create with constructor #3
+**/
+void Receiver::init(int forward, int backward, int left, int right) {
+  // Assigns the pins
+  RDATAS pins = { forward, backward, left, right };
+  init(pins);
+}
+
+/**
+ * Initialize an empty object create with constructor #3
+**/
+void Receiver::init(RDATAS pins) {
+  // Assigns the pins
+  _pins = { pins.f, pins.b, pins.l, pins.r };
   // Set the pins as inputs
   pinMode(_pins.f, INPUT);
   pinMode(_pins.b, INPUT);
@@ -44,6 +79,7 @@ Receiver::Receiver(int forward, int backward, int left, int right)
   // Datas are initialized to LOW (0)
   _datas = {LOW, LOW, LOW, LOW};
 }
+
 
 /**
  * Entry point to obtain datas from youre RX2 rc receiver
