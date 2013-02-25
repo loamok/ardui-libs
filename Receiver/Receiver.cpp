@@ -26,7 +26,7 @@
 #include "Receiver.h"
 
 /**
- * Receieer constructor ; Params in order are : 
+ * Receiver constructor ; Params in order are : 
  *  Forward pin
  *  backward pin
  *  Left pin
