@@ -21,4 +21,5 @@
 ##See lgpl.txt
 RDATAS	KEYWORD1
 Receiver	KEYWORD1
+init	KEYWORD2
 readDatas	KEYWORD2
