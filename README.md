@@ -43,6 +43,8 @@ void setup() {
   rc.init(p);
   // or shorter with :
   rc.init({2, 3, 4, 5});
+  // or better shorter with :
+  rc.init((RDATAS){2, 3, 4, 5});
 }
 
 void loop() {
@@ -59,6 +61,23 @@ void loop() {
 // 5 = right
 RDATAS p = {2, 3, 4, 5};
 Receiver rc(p);
+
+void setup() {
+}
+
+void loop() {
+  RDATAS rcv = rc.readDatas();
+  // do something sexy with your datas from an RX2 RC Receiver board
+}
+
+// #2.2 With shorter object creation
+#include <Receiver.h>
+// Define the pins as 
+// 2 = forward
+// 3 = backward
+// 4 = left
+// 5 = right
+Receiver rc((RDATAS){2, 3, 4, 5});
 
 void setup() {
 }
