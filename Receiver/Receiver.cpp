@@ -32,7 +32,7 @@
  *  Left pin
  *  Right pin
 **/
-Receiver::Receiver(int forward, int backward, int left, int right)
+Receiver::Receiver(byte forward, byte backward, byte left, byte right)
 {
   // Assigns the pins
   init(forward, backward, left, right);
@@ -59,7 +59,7 @@ Receiver::Receiver()
 /**
  * Initialize an empty object create with constructor #3
 **/
-void Receiver::init(int forward, int backward, int left, int right) {
+void Receiver::init(byte forward, byte backward, byte left, byte right) {
   // Assigns the pins
   RDATAS pins = { forward, backward, left, right };
   init(pins);
@@ -70,7 +70,7 @@ void Receiver::init(int forward, int backward, int left, int right) {
 **/
 void Receiver::init(RDATAS pins) {
   // Assigns the pins
-  _pins = { pins.f, pins.b, pins.l, pins.r };
+  _pins = pins;
   // Set the pins as inputs
   pinMode(_pins.f, INPUT);
   pinMode(_pins.b, INPUT);
@@ -99,7 +99,7 @@ RDATAS Receiver::readDatas()
 /**
  * Read a pin from the arduino
 **/
-int Receiver::_readPin (int pin) {
+byte Receiver::_readPin (byte pin) {
   return digitalRead(pin);
 }
 

@@ -1,33 +1,34 @@
-Loamok/Ardui-libs
-README.md
-Functions usage with the arduino© ide
+Copyright ©2013 Huby Franck <franck.huby@loamok.org>
 
-Created by Franck Huby, February 25, 2013.
+* [Loamok ChiliProject](https://redmine.loamok.org/projects/ardui-libs)
+* [Github](https://github.com/loamok/ardui-libs)
 
-This file is part of "Loamok Ardui-libs".
-https://redmine.loamok.org/projects/ardui-libs
+This program and it's parts are LGPL free software.
 
-"Loamok Ardui-libs" is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation, either version 3 of the License.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published
+by the Free Software Foundation, either version 3 of the License.
 
-"Loamok Ardui-libs" is distributed in the hope that it will be useful,
+This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
-along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+
 See lgpl.txt
 
-Receiver :
+# Receiver :
+
 Library part to manage a board containing a RX2 RC Receiver connected to your arduino.
 
 Install the folder "Receiver" in the "libraries" folder in your sketchbook folder.
 Restart the arduino ide.
 
-Usage :
+## Usage :
 
+```C++
 // #1 With empty object and init
 #include <Receiver.h>
 Receiver rc;
@@ -42,6 +43,8 @@ void setup() {
   rc.init(p);
   // or shorter with :
   rc.init({2, 3, 4, 5});
+  // or better shorter with :
+  rc.init((RDATAS){2, 3, 4, 5});
 }
 
 void loop() {
@@ -67,6 +70,23 @@ void loop() {
   // do something sexy with your datas from an RX2 RC Receiver board
 }
 
+// #2.2 With shorter object creation
+#include <Receiver.h>
+// Define the pins as 
+// 2 = forward
+// 3 = backward
+// 4 = left
+// 5 = right
+Receiver rc((RDATAS){2, 3, 4, 5});
+
+void setup() {
+}
+
+void loop() {
+  RDATAS rcv = rc.readDatas();
+  // do something sexy with your datas from an RX2 RC Receiver board
+}
+
 // #3 With long object creation
 #include <Receiver.h>
 // Define the pins as 
@@ -83,5 +103,5 @@ void loop() {
   RDATAS rcv = rc.readDatas();
   // do something sexy with your datas from an RX2 RC Receiver board
 }
-
+```
 

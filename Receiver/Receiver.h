@@ -27,23 +27,23 @@
 #include "Arduino.h"
 
 struct RDATAS { // Pretty structure to manage both pins and datas
-  int f; // Forward
-  int b; // Backward
-  int l; // Left
-  int r; // Right
+  byte f; // Forward
+  byte b; // Backward
+  byte l; // Left
+  byte r; // Right
 };
 
 class Receiver // Class that represent the receiver
 {
   public:
-    Receiver(int forward, int backward, int left, int right); // Object constructor #1
+    Receiver(byte forward, byte backward, byte left, byte right); // Object constructor #1
     Receiver(RDATAS pins); // Object constructor #2
     Receiver(); // Object constructor #3
-    void init(int forward, int backward, int left, int right); // initialize with an empty object (constructor #3)
+    void init(byte forward, byte backward, byte left, byte right); // initialize with an empty object (constructor #3)
     void init(RDATAS pins); // initialize with an empty object (constructor #3)
     RDATAS readDatas(); // Read the datas from the receiver
   private:
-    int _readPin(int pin);
+    byte _readPin(byte pin);
     void _readFB();
     void _readLR();
     RDATAS _pins;  // pins of the arduino
